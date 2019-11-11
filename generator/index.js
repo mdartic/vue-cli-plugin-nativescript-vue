@@ -311,7 +311,7 @@ module.exports = async (api, options, rootOptions) => {
         try {
           // move store.js file from ./src to ./app
           if (api.hasPlugin('vuex')) {
-            fs.moveSync('./src/store' + genConfig.jsOrTs, genConfig.dirPathPrefix + genConfig.nativeAppPathModifier + 'store' + genConfig.jsOrTs, {
+            fs.moveSync('./src/store/index' + genConfig.jsOrTs, genConfig.dirPathPrefix + genConfig.nativeAppPathModifier + 'store/index' + genConfig.jsOrTs, {
               overwrite: true
             });
           }
@@ -352,7 +352,7 @@ module.exports = async (api, options, rootOptions) => {
       if (options.isNativeOnly) {
         // move store.js file from ./src to ./ns-example/app
         if (api.hasPlugin('vuex')) {
-          fs.copy('./src/store' + genConfig.jsOrTs, genConfig.dirPathPrefix + genConfig.nativeAppPathModifier + 'store' + genConfig.jsOrTs, (err) => {
+          fs.copy('./src/store/index' + genConfig.jsOrTs, genConfig.dirPathPrefix + genConfig.nativeAppPathModifier + 'store/index' + genConfig.jsOrTs, (err) => {
             if (err) throw err;
           });
         }
