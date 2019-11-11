@@ -264,7 +264,7 @@ module.exports = async (api, options, rootOptions) => {
 
     // remove router config for projects that don't use vue-router
     if (!rootOptions.router) {
-      fs.remove(genConfig.dirPathPrefix + genConfig.nativeAppPathModifier + 'router' + genConfig.jsOrTs, (err) => {
+      fs.remove(genConfig.dirPathPrefix + genConfig.nativeAppPathModifier + 'router/index' + genConfig.jsOrTs, (err) => {
         if (err) throw err;
       });
     }

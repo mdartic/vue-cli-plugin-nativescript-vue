@@ -12,7 +12,7 @@ If you want to add additional templates to the plugin, then here's the informati
     * The directory name should __exactly match__ the value from #1.  For example if the value from #1 is `simple`, then the directory structure would be `/generator/templates/simple`
 3.  The new template directory __must__ have a single first-level subdirectory named `src`.  
 4.  Inside the `src` directory, you should add the following in an effort to give the template feature consistancy to the other templates:
-    *  router.js
+    *  router/index.js
     *  main.js 
     *  main.native.js (the NS-Vue project entry point)
     *  package.json (this is the standard NativeScript-Vue package.json file.  Just copy/paste from the simple template)

@@ -1,12 +1,12 @@
 ---
-extend: '@vue/cli-service/generator/router/template/src/router.js'
+extend: '@vue/cli-plugin-router/generator/template/src/router/index.js'
 replace:
   - !!js/regexp /import Vue from 'vue'/
   - !!js/regexp /import Router from 'vue-router'/
   - !!js/regexp /Vue.use\(Router\)/
   - !!js/regexp /export default new Router\(\{/
-  - !!js/regexp /import Home from '\./views/Home.vue'/
-  - !!js/regexp /\(\) => import(.*)\.\/views\/About\.vue'\)/
+  - !!js/regexp /import Home from '\.\./views/Home.vue'/
+  - !!js/regexp /\(\) => import(.*)\.\.\/views\/About\.vue'\)/
   - !!js/regexp /(\s+)\/\/ (.*)/
   - !!js/regexp /(\s+)\/\/ (.*)/
   - !!js/regexp /(\s+)\/\/ (.*)/
